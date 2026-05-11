@@ -1,5 +1,6 @@
 # CPSC-393-final-project-code
 This is the code we used to build our models for the final project. We built a KNN, Logistic regression and Decision Tree models, improved them, and then comapred them to a naive baseline model to show the impact of the changes we made to make it more accurate efficient and perform better.
+
 #README.MD
 **Project Title: Early Detection of Heart Disease Using Machine Learning
 Contributors
@@ -8,6 +9,7 @@ Winston Ivory
 Ronan McDermott**
 **Dataset Information**
 Our project uses the CDC's Behavioral Risk Factor Surveillance System (BRFSS) 2020 dataset, specifically the cleaned version (heart_2020_cleaned.csv). The dataset contains approximately 300,000 survey responses with 18 features related to health status, lifestyle, and demographics.
+https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
 
 **Setup Instructions**
 Our project was developed and intended to be run in Google Colab or VSCode.
