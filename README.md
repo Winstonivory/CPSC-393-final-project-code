@@ -31,7 +31,7 @@ Go to the top menu and select Runtime > Run all to execute the actual code.
 **3. Fully Improved Models:** 
 To build a safe and effective screening models, we implemented several improvements:
 Class Balancing: We used class_weight='balanced' for Logistic Regression and Decision Trees, and random undersampling for KNN, forcing the models to pay attention to the minority class.
-Threshold Tuning: We carved out a completely isolated validation set to perform custom probability threshold tuning, shifting the decision threshold (from 0.50 at the start to 0.67 for Logistic Regression) in order to optimize for the F1 score and Recall.
+Threshold Tuning: We carved out a completely isolated validation set to perform custom probability threshold tuning, shifting the decision threshold (from 0.50 at the start to 0.67 for Logistic Regression) in order to optimize for the F1 score and Recall. What we noticed was at a threshold of 0.67, the F1 was the best, but the recall dropped. In the context of our stakeholders, and us proposing this as a good tool for an initial screening, we believe preserving the strongest Recall was the most important, and at a threshold at 0.5, it performed better
 
 **4. Model Comparison & Final Selection:**
 We evaluated three different algorithms: Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN).
