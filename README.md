@@ -19,11 +19,13 @@ Our project was developed and intended to be run in Google Colab or VSCode.
 Installation:** If running in Google Colab, these libraries are already pre-installed. If running locally, you can install them via terminal:
 pip install pandas numpy matplotlib seaborn scikit-learn
 **How to Run the Code**
-Download the heart_2020_cleaned.csv dataset and upload it to your Google Drive.
-Open the Jupyter Notebook in Google Colab.
-Run the first cell to mount your Google Drive to the Colab environment.
+Download the heart_2020_cleaned.csv dataset and upload it to your Google Drive, or on your device.
+Open the Jupyter Notebook in Google Colab, or create a new file in VSCode or Cursor.
+Then mount the dataset, and make sure the model pulls it from where you stored it. From there run the model with the code pasted in. If there are any erros, it will most likely be the file isn't pulling the dataset from the right space.
+For collab, Run the first cell to mount your Google Drive to the Colab environment.
 In the second cell, update the file_path variable to point to the exact location of the dataset in your Google Drive.
 Go to the top menu and select Runtime > Run all to execute the actual code.
+
 **Results & Methodology**
 1. Data Cleaning & Preprocessing: Before building our models, we thoroughly cleaned and preprocessed the data. This involved checking for missing values, removing over 18,000 duplicate rows to prevent train/test leakage, binary encoding our target variable (HeartDisease), and one-hot encoding 13 categorical features. We also applied standard scaling to our numerical features to prepare them for algorithms like Logistic Regression and KNN.
 
@@ -32,7 +34,7 @@ Go to the top menu and select Runtime > Run all to execute the actual code.
 **3. Fully Improved Models:** 
 To build a safe and effective screening models, we implemented several improvements:
 Class Balancing: We used class_weight='balanced' for Logistic Regression and Decision Trees, and random undersampling for KNN, forcing the models to pay attention to the minority class.
-Threshold Tuning: We carved out a completely isolated validation set to perform custom probability threshold tuning, shifting the decision threshold (from 0.50 at the start to 0.67 for Logistic Regression) in order to optimize for the F1 score and Recall. What we noticed was at a threshold of 0.67, the F1 was the best, but the recall dropped. In the context of our stakeholders, and us proposing this as a good tool for an initial screening, we believe preserving the strongest Recall was the most important, and at a threshold at 0.5, it performed better
+Threshold Tuning: We carved out a completely isolated validation set to perform custom probability threshold tuning, shifting the decision threshold (from 0.50 at the start to 0.67 for Logistic Regression) in order to optimize for the F1 score and Recall. What we noticed was at a threshold of 0.67, the F1 was the best, but the recall dropped. In the context of our stakeholders, and us proposing this as a good tool for an initial screening, we believe preserving the strongest Recall was the most important, and at a threshold at 0.5, it performed better. So for an initial screening screening run 0.5, but anything past that the 0.67 threshold is better practice.
 
 **4. Model Comparison & Final Selection:**
 We evaluated three different algorithms: Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN).
