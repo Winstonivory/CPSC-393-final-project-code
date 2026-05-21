@@ -7,12 +7,13 @@ Contributors
 Mason Quicke
 Winston Ivory
 Ronan McDermott**
+
 **Dataset Information**
 Our project uses the CDC's Behavioral Risk Factor Surveillance System (BRFSS) 2020 dataset, specifically the cleaned version (heart_2020_cleaned.csv). The dataset contains approximately 300,000 survey responses with 18 features related to health status, lifestyle, and demographics.
 https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
 
 **Setup Instructions**
-Our project was developed and intended to be run in Google Colab or VSCode.
+Our project was developed and intended to be run in Google Colab or VSCode. 
 
 **Dependencies / Libraries:** the libraries used were pandas, numpy, matplotlib, seaborn, scikit-learn**
 Installation:** If running in Google Colab, these libraries are already pre-installed. If running locally, you can install them via terminal:
