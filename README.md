@@ -18,13 +18,21 @@ Our project was developed and intended to be run in Google Colab or VSCode.
 **Dependencies / Libraries:** the libraries used were pandas, numpy, matplotlib, seaborn, scikit-learn**
 Installation:** If running in Google Colab, these libraries are already pre-installed. If running locally, you can install them via terminal:
 pip install pandas numpy matplotlib seaborn scikit-learn
+
 **How to Run the Code**
-Download the heart_2020_cleaned.csv dataset and upload it to your Google Drive, or on your device.
-Open the Jupyter Notebook in Google Colab, or create a new file in VSCode or Cursor.
+For Collab: Download the heart_2020_cleaned.csv dataset and upload it to your Google Drive, or on your device.
+Open the Jupyter Notebook in Google Colab.
 Then mount the dataset, and make sure the model pulls it from where you stored it. From there run the model with the code pasted in. If there are any erros, it will most likely be the file isn't pulling the dataset from the right space.
-For collab, Run the first cell to mount your Google Drive to the Colab environment.
+Run the first cell to mount your Google Drive to the Colab environment.
 In the second cell, update the file_path variable to point to the exact location of the dataset in your Google Drive.
 Go to the top menu and select Runtime > Run all to execute the actual code.
+
+For VSCode: 
+Clone the repository and open the project folder in VS Code.
+Ensure you have the Python and Jupyter extensions installed in VS Code.
+Verify that heart_2020_cleaned.csv is located in the root directory alongside your code file.
+Open the code notebook file, select your Python kernel environment, and click Run All at the top of the interface.
+*The model optimization/hyperparameter tuning section utilizes cross-validation loops and may take a couple of minutes to complete execution.*
 
 **Results & Methodology**
 1. Data Cleaning & Preprocessing: Before building our models, we thoroughly cleaned and preprocessed the data. This involved checking for missing values, removing over 18,000 duplicate rows to prevent train/test leakage, binary encoding our target variable (HeartDisease), and one-hot encoding 13 categorical features. We also applied standard scaling to our numerical features to prepare them for algorithms like Logistic Regression and KNN.
